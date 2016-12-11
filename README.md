@@ -1,0 +1,2 @@
+# android_kotlin_dev_knowledge
+Android開発でハマった所
