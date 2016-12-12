@@ -21,7 +21,7 @@ KotlinでのAndroid開発でハマった所や知見の走り書きなど
  
 # Support Liberary関連
  ## Support Libraryは使用するクラス名を呼び出すにはsupportをつけることが多い。つけないと既存のAPIのクラスが呼ばれるため、これを知らずにクラスを混在させているとハマることがある
- 
+ ## Support LibraryのFragmentとandroid.app.Fragmentが混在しているとトランザクション時にreplaceがうまく働かない。結構ネット上に原因混在させて書いてるものが多い気がするけど、基本的に混ぜるのはNG。supportライブラリのものを使う。
 # レイアウト関連
  ## xmlエディタとAVDのAPIレベルやデバイスが食い違うとAVD側で表示が崩れる
  ## 他デバイス関連に対応させるため、基本的にConstraint Layoutで作る
