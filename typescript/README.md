@@ -16,9 +16,9 @@ import * as someModule from './someModule'
 ```
 外部ライブラリのambient modulesの定義は分割すると管理が大変になるため、一箇所に集約したほうが良い。
 someModuleはindex.d.tsあるいはimportでdeclareされたモジュールに型定義されたようにimportされる。なければany。
-typescriptは.d.tsもimport時に、includeするので、自作のtsやライブラリに型定義ファイルがある場合はマージインポートされるため設定が不要。
+typescriptはtsconfigのtypeRoot、typesで指定されているパラメータでデフォルトではnode_modulesの@typesが参照されるため設定が不要。
 またambient moudles用の型定義ファイルをオプションで設定することもできそう。この辺は要調査。
-Typscriptは解析された全てのtsファイルをincludeするため、importなでincludeされたスコープにアンビエント宣言やmodule宣言があれば、reference pathはいらない。
+Typscriptは解析された全てのtsファイルをincludeするため、importなどでincludeされたスコープにアンビエント宣言やmodule宣言があれば、reference pathはいらない。
 
 > For declaring a dependency on an @types package in a .ts file, use --types on the command line or in your tsconfig.json instead. See using @types, typeRoots and types in tsconfig.json files for more details.
 
