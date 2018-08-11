@@ -22,6 +22,8 @@ Typscriptは解析された全てのtsファイルをincludeするため、impor
 
 > For declaring a dependency on an @types package in a .ts file, use --types on the command line or in your tsconfig.json instead. See using @types, typeRoots and types in tsconfig.json files for more details.
 
+また、jsのインポートファイルパスに同名の型定義ファイル.d.tsを配置する時にjsのファイルが型定義された状態でインポートすることができる。これは、c言語のヘッダと実行ファイルの関係と類似している。
+
 ## namespace and module
 
 tsの値、タイプ型、クラスを全てを指定できるものを、全て指定したnamespaseオブジェクトに紐付ける。つまり、namespaceの名前をオブジェクトのkeyにして、オブジェクトを、mergeするイメージ。
@@ -37,3 +39,5 @@ declare global {
 
 ### マージルール
 とにかく複雑なので、公式の対応表を確認したほうが良い。merge以外はオーバーライド。直観に合わないものだけ、注意するだけで十分かもしれない。
+
+
