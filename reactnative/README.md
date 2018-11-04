@@ -31,7 +31,7 @@
 # Styling規約
 - stylingは独自定義の汎用コンポーネントには必ずstyled-components/nativeを使用する。ライブラリのstyleや、アトミックデザインでいう、Organizationコンポーネントのスタイルをpropsに渡すときは、StyleSheet.createを極力使用する(propsで変更検知する場合など冗長になる場合はオブジェクトでも良い)。
 - propsの条件分岐をクラスと同じにするため共通スタイルのコンポーネントはなるべくwithPropsをimportし、同じ実装を使い回す
-
+- attrs,css
 
 # Redux Saga規約
 
